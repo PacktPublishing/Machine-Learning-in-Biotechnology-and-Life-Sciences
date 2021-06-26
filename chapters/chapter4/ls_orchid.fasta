@@ -1,0 +1,6 @@
+--2021-06-06 13:41:44--  https://raw.githubusercontent.com/biopython/biopython/master/Doc/examples/ls_orchid.fasta
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.108.133, 185.199.111.133, 185.199.110.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.108.133|:443... connected.
+ERROR: cannot verify raw.githubusercontent.com's certificate, issued by 'CN=DigiCert SHA2 High Assurance Server CA,OU=www.digicert.com,O=DigiCert Inc,C=US':
+  Unable to locally verify the issuer's authority.
+To connect to raw.githubusercontent.com insecurely, use `--no-check-certificate'.
