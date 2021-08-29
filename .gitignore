@@ -1,1 +1,10 @@
 datasets/
+
+*.txt
+
+*NOTDONE.ipynb
+
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+**/.ipynb_checkpoints/*
+*/.ipynb_checkpoints/*.ipynb
