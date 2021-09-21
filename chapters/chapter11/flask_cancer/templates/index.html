@@ -18,29 +18,26 @@
               </form>
         </nav>
         <div class="container-fluid container bg-light justify-content-center text-center">
-            <h1 class="m-4">Summarizer Application</h3>
-                <h3>"An app to summarize long paragraphs to short sentences"</h3>
+            <h1 class="m-4">Breast Cancer Prediction</h3>
+                <h3>"Predict the Diagnosis using a Previously Trained Model"</h3>
                 <form action="{{ url_for('prediction')}}" method="post">
                 <div>
                     <label for="paragraphs">Enter paragraphs here:</label>
                 </div>
-                <textarea type="text" id="paragraphs" name="paragraphs" placeholder="firstname"  rows="6" cols="80" required="required"> </textarea>
                 
-                
-                <div>
-                    <label for="limit">Maximum number of characters:</label>
-                </div>
-                <div class="align-self-center">
-                    <input name="maxlen" style="width:600" class="form-range" type="range" value="150" min="50" max="1000" oninput="this.nextElementSibling.value = this.value">
-                    <output>150</output>
-                </div>
+                <input type="text" id="radius_mean" name="radius_mean" placeholder="radius_mean"  rows="6" cols="80" required="required"> </input>
+                <input type="text" id="texture_mean" name="texture_mean" placeholder="texture_mean"  rows="6" cols="80" required="required"> </input>
+                <input type="text" id="smoothness_mean" name="smoothness_mean" placeholder="smoothness_mean"  rows="6" cols="80" required="required"> </input>
+                <input type="text" id="texture_se" name="texture_se" placeholder="texture_se"  rows="6" cols="80" required="required"> </input>
+                <input type="text" id="smoothness_se" name="smoothness_se" placeholder="smoothness_se"  rows="6" cols="80" required="required"> </input>
+                <input type="text" id="symmetry_se" name="symmetry_se" placeholder="symmetry_se"  rows="6" cols="80" required="required"> </input>
                 
                 <div class="m-3">
-                    <button type="submit" class="btn btn-primary col-2">Summarize!</button>
+                    <button type="submit" class="btn btn-primary col-2">Get Prediction!</button>
                     <input type="reset" value="Reset" class="btn btn-outline-danger col-2">
                 </div>
                 <div>
-                    <h3>Summary:</h3>
+                    <h3>Diagnosis:</h3>
                     
                     <h5 class = "prediction">{{prediction_text}}</h5>
                 </div>
