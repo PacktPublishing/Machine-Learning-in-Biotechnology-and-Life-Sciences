@@ -23,6 +23,10 @@ app = Flask(__name__, template_folder='templates')
 def home():
     return render_template('index.html')
 
+@app.route('/test')
+def hello():
+    return "hello biotech world!"
+
 @app.route('/prediction', methods = ["POST"])
 def prediction():
     print(request.form.values())
