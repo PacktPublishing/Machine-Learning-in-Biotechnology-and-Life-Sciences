@@ -4,8 +4,8 @@ import pickle
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 
-loaded_scaler = pickle.load(open("./models/ch10_scaler.pickle", 'rb'))
-loaded_clf = pickle.load(open("./models/ch10_rfc_clf.pickle", 'rb'))
+loaded_scaler = pickle.load(open("./models/ch11_scaler.pickle", 'rb'))
+loaded_clf = pickle.load(open("./models/ch11_rfc_clf.pickle", 'rb'))
 
 def predict_diagnosis(inputData, scaler, model):
     """
