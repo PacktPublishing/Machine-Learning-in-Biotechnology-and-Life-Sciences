@@ -1,12 +1,11 @@
 from flask import Flask, jsonify, request, render_template 
-# import json
+import json
 import pickle
 import pandas as pd
+from sklearn.preprocessing import StandardScaler
 
-print(">>>>> LOADING MODELS")
-loaded_scaler = pickle.load(open("./models/ch10_scaler.pickle", 'rb'))
-loaded_clf = pickle.load(open("./models/ch10_rfc_clf.pickle", 'rb'))
-print(">>>>> MODELS LOADED")
+loaded_scaler = pickle.load(open("./models/ch11_scaler.pickle", 'rb'))
+loaded_clf = pickle.load(open("./models/ch11_rfc_clf.pickle", 'rb'))
 
 def predict_diagnosis(inputData, scaler, model):
     """
@@ -18,21 +17,17 @@ def predict_diagnosis(inputData, scaler, model):
     return prediction[0]
 
 
-# EB looks for an 'application' callable by default.
-application = Flask(__name__)
-application.config['EXPLAIN_TEMPLATE_LOADING'] = True
+app = Flask(__name__, template_folder='templates')
 
-# add a rule for the index page.
-
-@application.route('/')
+@app.route('/')
 def home():
-    return render_template('./templates/index.html')
+    return render_template('index.html')
 
-@application.route('/hello')
+@app.route('/test')
 def hello():
-    return "Hello Biotech World!"
+    return "hello biotech world!"
 
-@application.route('/prediction', methods = ["POST"])
+@app.route('/prediction', methods = ["POST"])
 def prediction():
     print(request.form.values())
     radius_mean = request.form.get("radius_mean")
@@ -45,11 +40,8 @@ def prediction():
     prediction = predict_diagnosis(input_features, loaded_scaler, loaded_clf)
     prediction = "Malignant" if prediction == "M" else "Benign"
     
-    return render_template('./templates/index.html', prediction_text = '" {} "'.format(prediction))
+    return render_template('index.html', prediction_text = '" {} "'.format(prediction))
 
-# run the app.
-if __name__ == "__main__":
-    # Setting debug to True enables debug output. This line should be
-    # removed before deploying a production app.
-    application.debug = True
-    application.run()
+if __name__ == '__main__':
+    # app.run(debug=True)
+    app.run(debug=False, host='0.0.0.0', port=5000)
