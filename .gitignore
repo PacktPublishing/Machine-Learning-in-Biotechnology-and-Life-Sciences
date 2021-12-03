@@ -3,6 +3,7 @@ datasets/
 *.txt
 
 *NOTDONE.ipynb
+DNU*
 
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
