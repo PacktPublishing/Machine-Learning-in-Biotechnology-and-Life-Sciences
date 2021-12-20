@@ -1,2 +1,2 @@
-# Machine-Learning-in-Biotechnology-using-Python
-Machine Learning in Biotechnology using Python
+# Machine-Learning-in-Biotechnology-and-Life-Sciences
+Machine Learning in Biotechnology and Life Sciences
