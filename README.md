@@ -40,7 +40,7 @@ This book is for data scientists and scientific professionals looking to transce
 
 With the following software and hardware list you can run all code files present in the book (Chapter 1-12).
 
-### Software and Hardware List
+### Software List
 
 | Chapter  | Software required                                                                    | OS required                        |
 | -------- | -------------------------------------------------------------------------------------| -----------------------------------|
