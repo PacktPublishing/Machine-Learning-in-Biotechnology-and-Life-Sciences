@@ -61,3 +61,7 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
   
 ## Get to Know the Author
 **Saleh Alkhalifa** is a data scientist and manager in the biotechnology industry with 4 years of industry experience working and living in the Boston area. With a strong academic background in the applications of machine learning for discovery, prediction, forecasting, and analysis, he has spent the last 3 years developing models that touch all facets of business and scientific functions.
+### Download a free PDF
+
+ <i>If you have already purchased a print or Kindle version of this book, you can get a DRM-free PDF version at no cost.<br>Simply click on the link to claim your free PDF.</i>
+<p align="center"> <a href="https://packt.link/free-ebook/9781801811910">https://packt.link/free-ebook/9781801811910 </a> </p>
